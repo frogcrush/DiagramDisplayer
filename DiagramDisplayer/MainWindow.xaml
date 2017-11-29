@@ -16,7 +16,7 @@
             </DataTemplate>
 
             <ItemsPanelTemplate x:Key="ItemPanelTemplate">
-                <WrapPanel Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Disabled" />
+                <WrapPanel Orientation="Vertical" ScrollViewer.HorizontalScrollBarVisibility="Disabled" />
             </ItemsPanelTemplate>
         </ResourceDictionary>
     </Window.Resources>
@@ -54,7 +54,9 @@
             </Grid.RowDefinitions>
 
             <TextBlock FontFamily="Segoe UI Light" FontSize="24" Text="{Binding SelectedItem.Title}" Grid.Row="0" Foreground="Black"/>
-            <Image Source="{Binding SelectedItem.Image}" Grid.Row="1" />
+            <local:ZoomBorder ClipToBounds="True" Grid.Row="1" x:Name="zoomBorder" >
+                <Image Source="{Binding SelectedItem.Image}" />
+            </local:ZoomBorder>
             <Button Click="CloseGrid" Content="Close" Grid.Row="2" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Bottom" Height="30" Width="100"/>
         </Grid>
     </Grid>

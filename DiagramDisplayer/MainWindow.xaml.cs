@@ -59,6 +59,7 @@ namespace DiagramDisplayer
             if (s.SelectedItem == null) return;         
             _model.SelectedItem = (ImageItem)s.SelectedItem;
             s.SelectedItem = null;
+            zoomBorder.Reset();
             OverGrid.Visibility = Visibility.Visible;
         }
 
