@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagramDisplayer", "DiagramDisplayer\DiagramDisplayer.csproj", "{347EACFD-7C8E-45FE-A78F-C4644FE13FCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{347EACFD-7C8E-45FE-A78F-C4644FE13FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{347EACFD-7C8E-45FE-A78F-C4644FE13FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{347EACFD-7C8E-45FE-A78F-C4644FE13FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{347EACFD-7C8E-45FE-A78F-C4644FE13FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEA5A516-3452-44B2-9A0F-2B30CB77025B}
+	EndGlobalSection
+EndGlobal
