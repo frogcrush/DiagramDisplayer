@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiagramDisplayer"
         mc:Ignorable="d"
-        Title="Diagram Displayer - Because other ways are for plebs you dirty whores" Height="720" Width="1280">
+        Title="Diagram Displayer - by Tylor Pater" Height="720" Width="1280">
     <Window.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="ImageItemTemplate">
@@ -16,7 +16,7 @@
             </DataTemplate>
 
             <ItemsPanelTemplate x:Key="ItemPanelTemplate">
-                <WrapPanel Orientation="Horizontal" />
+                <WrapPanel Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Disabled" />
             </ItemsPanelTemplate>
         </ResourceDictionary>
     </Window.Resources>
@@ -46,14 +46,14 @@
         <ListBox Margin="10,10,180,32" ItemTemplate="{StaticResource ImageItemTemplate}" ItemsPanel="{StaticResource ItemPanelTemplate}" ItemsSource="{Binding Process}" SelectionChanged="ListBox_Selected" Grid.Row="1"/>
         <ListBox Margin="180,10,10,32" ItemTemplate="{StaticResource ImageItemTemplate}" ItemsPanel="{StaticResource ItemPanelTemplate}" ItemsSource="{Binding Physical}" SelectionChanged="ListBox_Selected" Grid.Column="1" Grid.Row="1"/>
 
-        <Grid Grid.RowSpan="100" Grid.ColumnSpan="100" Background="Black" x:Name="OverGrid" Visibility="Collapsed">
+        <Grid Grid.RowSpan="100" Grid.ColumnSpan="100" Background="White" x:Name="OverGrid" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <TextBlock FontFamily="Segoe UI Light" FontSize="24" Text="{Binding SelectedItem.Title}" Grid.Row="0" Foreground="White"/>
+            <TextBlock FontFamily="Segoe UI Light" FontSize="24" Text="{Binding SelectedItem.Title}" Grid.Row="0" Foreground="Black"/>
             <Image Source="{Binding SelectedItem.Image}" Grid.Row="1" />
             <Button Click="CloseGrid" Content="Close" Grid.Row="2" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Bottom" Height="30" Width="100"/>
         </Grid>

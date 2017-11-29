@@ -58,6 +58,7 @@ namespace DiagramDisplayer
             var s = (ListBox)sender;
             if (s.SelectedItem == null) return;         
             _model.SelectedItem = (ImageItem)s.SelectedItem;
+            s.SelectedItem = null;
             OverGrid.Visibility = Visibility.Visible;
         }
 
